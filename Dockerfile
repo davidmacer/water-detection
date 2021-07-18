@@ -6,9 +6,9 @@ RUN pip install \
     pyshp \
     pygeoif \
     matplotlib
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get install --yes \
     file
-RUN wget https://www.orfeo-toolbox.org/packages/OTB-7.3.0-Linux64.run -y
+RUN wget https://www.orfeo-toolbox.org/packages/OTB-7.3.0-Linux64.run
 RUN chmod +x OTB-7.3.0-Linux64.run
 RUN ./OTB-7.3.0-Linux64.run
 RUN rm ./OTB-7.3.0-Linux64.run
