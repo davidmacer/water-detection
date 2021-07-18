@@ -1,4 +1,7 @@
-all: ./data/presas_ags_prod.tif
+all: ./data/presas_ags_prod.tif ./resultados/labeled_image.tif
+
+./resultados/labeled_image.tif: ./src/segmentacion.otb.sh ./data/presas_ags_prod.tif
+	./src/./src/segmentacion.otb.sh
 
 ./data/presas_ags_prod.tif: ./src/WaterBodiesImgProcess.py
 	[ -d ./resultados ] || mkdir ./resultados
