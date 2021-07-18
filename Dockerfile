@@ -12,4 +12,4 @@ RUN wget https://www.orfeo-toolbox.org/packages/OTB-7.3.0-Linux64.run
 RUN chmod +x OTB-7.3.0-Linux64.run
 RUN ./OTB-7.3.0-Linux64.run
 RUN rm ./OTB-7.3.0-Linux64.run
-RUN source OTB-7.3.0-Linux64/otbenv.profile
+RUN source ./workdir/OTB-7.3.0-Linux64/otbenv.profile
